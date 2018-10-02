@@ -30,7 +30,10 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    if(num%3!=0){ if(num%5!=0) return num;}
+    if(num%3==0){ if(num%5!=0) return 'Fizz';}
+    if(num%3!=0){ if(num%5==0) return 'Buzz';}
+    if(num%3==0){ if(num%5==0) return 'FizzBuzz';}
 }
 
 
@@ -46,7 +49,10 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+var a=1;
+    for(var x=1; x<=n; x++)
+     a=a*x;
+return a;
 }
 
 
@@ -63,7 +69,10 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    var a=0;
+    for(var x=n1; x<=n2; x++)
+	a=a+x;
+return a;
 }
 
 
@@ -82,7 +91,8 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+    if(a+b>c){if(a+c>b){if(b+c>a) return true;}}
+return false;
 }
 
 
@@ -166,7 +176,7 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-    throw new Error('Not implemented');
+   throw new Error('Not implemented'); 
 }
 
 
@@ -192,7 +202,14 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-    throw new Error('Not implemented');
+    var c='';
+if(isStartIncluded==true) c=c+'[';
+else c=c+'(';
+if(a<b) c=c+a+', '+b;
+else c=c+b+', '+a;
+if(isEndIncluded==true) c=c+']';
+else c=c+')';
+return c;
 }
 
 
@@ -209,7 +226,10 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    var a='';
+for(var x=str.length-1; x>=0; x--)
+a=a+str[x];
+return a;
 }
 
 
@@ -226,7 +246,12 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+var a='';
+a=a+num;
+var b='';
+for(var x=a.length-1; x>=0; x--)
+b=b+a[x];
+return 0-b*-1;
 }
 
 
@@ -270,7 +295,7 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+throw new Error('Not implemented');
 }
 
 
